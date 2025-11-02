@@ -16,7 +16,7 @@
 
   /* Warna untuk Beranda (dari gambar) */
   --warna-beranda-latar: #d5e8d4;
-  --warna-beranda-outline: #b53c3c;
+  --warna-beranda-outline: #b53c3c; /* Merah kecoklatan dari contoh */
 }
 
 /* Pengaturan Dasar Halaman */
@@ -33,7 +33,7 @@ body {
   line-height: 1.6;
 }
 
-/* --- [BARU] Navigasi Utama --- */
+/* --- Navigasi Utama --- */
 .navbar-utama {
   background-color: #ffffff;
   border-bottom: 1px solid #ddd;
@@ -84,19 +84,23 @@ body {
   color: white;
 }
 
-/* --- [BARU] Hero Section Beranda --- */
+/* --- Hero Section Beranda --- */
 .beranda-hero {
   background-color: var(--warna-beranda-latar);
+  /* Tinggi min-height agar ada ruang untuk gambar dekorasi */
+  min-height: 400px; /* Sesuaikan jika perlu */
   padding: 60px 20px 40px 20px;
   text-align: center;
-  border-bottom: 5px solid #a3c4a2;
+  border-bottom: 5px solid #a3c4a2; /* Border hijau gelap */
   position: relative;
-  overflow: hidden;
+  overflow: hidden; /* Penting agar gambar tidak keluar dari area */
 }
 
 .hero-content {
   position: relative;
-  z-index: 2;
+  z-index: 2; /* Pastikan konten teks di atas gambar dekorasi */
+  max-width: 600px; /* Batasi lebar konten agar tidak terlalu melebar */
+  margin: 0 auto; /* Tengahkkan konten */
 }
 
 .beranda-subtitle-top {
@@ -111,6 +115,7 @@ body {
   color: white;
   line-height: 1.1;
   margin: 10px 0;
+  /* Efek stroke dan shadow untuk teks putih */
   -webkit-text-stroke: 1px var(--warna-beranda-outline);
   text-stroke: 1px var(--warna-beranda-outline);
   paint-order: stroke fill;
@@ -143,46 +148,53 @@ body {
   color: #444;
 }
 
-/* Dekorasi (Placeholder) */
+/* --- Dekorasi Gambar Hero Section --- */
 .dekorasi {
   position: absolute;
-  opacity: 0.5;
-  z-index: 1;
-  /* Ganti src di HTML dengan path gambar asli */
-  width: 150px;
-  height: auto;
-  /* Placeholder */
-  background: #aaa;
-  color: white;
-  padding: 10px;
-  border-radius: 8px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.dekorasi-1 {
-  top: 10px;
-  left: 10px;
-  width: 150px;
-  transform: rotate(-45deg);
-}
-.dekorasi-2 {
-  top: 10px;
-  right: 10px;
-  width: 120px;
-}
-.dekorasi-3 {
-  bottom: 60px;
-  left: 20px;
-  width: 200px;
-}
-.dekorasi-4 {
-  bottom: 10px;
-  right: 20px;
-  width: 180px;
+  /* Ganti opasitas jika gambar sudah pas */
+  /* opacity: 0.8; */
+  z-index: 1; /* Di bawah teks, di atas latar */
+  pointer-events: none; /* Agar tidak menghalangi klik pada elemen lain */
 }
 
-/* --- [BARU] Konten Utama & Pilihan Materi --- */
+/* Penggaris Kiri Atas */
+.dekorasi-penggaris-kiri {
+  top: -10px; /* Sesuaikan posisi agar sedikit keluar atau di dalam */
+  left: 0;
+  width: 180px; /* Lebar penggaris */
+  transform: rotate(-15deg); /* Sedikit miring */
+  filter: drop-shadow(
+    2px 2px 3px rgba(0, 0, 0, 0.2)
+  ); /* Tambah bayangan agar lebih hidup */
+}
+
+/* Stapler Kanan Atas */
+.dekorasi-stapler-kanan {
+  top: 20px;
+  right: 20px;
+  width: 100px; /* Lebar stapler */
+  transform: rotate(10deg);
+  filter: drop-shadow(2px 2px 3px rgba(0, 0, 0, 0.2));
+}
+
+/* Siswa Kiri Bawah */
+.dekorasi-siswa {
+  bottom: -10px; /* Sesuaikan agar kakinya terlihat atau tersembunyi */
+  left: 20px;
+  width: 200px; /* Lebar gambar siswa */
+  filter: drop-shadow(3px 3px 5px rgba(0, 0, 0, 0.3));
+}
+
+/* Tumpukan Buku Kanan Bawah */
+.dekorasi-buku {
+  bottom: 5px;
+  right: 5px;
+  width: 150px; /* Lebar tumpukan buku */
+  transform: rotate(-5deg);
+  filter: drop-shadow(2px 2px 3px rgba(0, 0, 0, 0.2));
+}
+
+/* --- Konten Utama & Pilihan Materi --- */
 main.container {
   max-width: 900px;
   margin: 30px auto;
@@ -255,7 +267,7 @@ p.deskripsi-pilihan {
   background-color: var(--warna-dasar-gelap);
 }
 
-/* --- [BARU] Footer --- */
+/* --- Footer --- */
 .footer-utama {
   text-align: center;
   padding: 20px;
@@ -517,9 +529,18 @@ hr.pemisah-lkpd {
 
   .beranda-hero {
     padding: 40px 15px 30px 15px;
+    min-height: 350px; /* Sesuaikan untuk mobile */
   }
-  .dekorasi {
-    display: none; /* Sembunyikan dekorasi di HP agar tidak penuh */
+  /* Sembunyikan beberapa dekorasi di HP agar tidak terlalu ramai */
+  .dekorasi-penggaris-kiri,
+  .dekorasi-stapler-kanan,
+  .dekorasi-buku {
+    display: none;
+  }
+  .dekorasi-siswa {
+    width: 150px; /* Lebih kecil untuk mobile */
+    left: 5px;
+    bottom: 0px;
   }
 
   .materi-pilihan-container {
