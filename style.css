@@ -546,4 +546,48 @@ hr.pemisah-lkpd {
   .materi-pilihan-container {
     grid-template-columns: 1fr;
   }
+
+  /* --- [BARU] CSS untuk Skor Total & Detail Soal Cerita --- */
+
+  /* Tampilan untuk Total Skor */
+  .skor-total {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    text-align: center;
+    background-color: var(--warna-benar-latar);
+    color: var(--warna-benar);
+    border: 1px solid var(--warna-benar);
+  }
+
+  /* Tampilan untuk Spoiler Jawaban Soal Cerita */
+  details.contoh-jawaban {
+    margin-top: 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #eee;
+    border-radius: 8px;
+  }
+  details.contoh-jawaban summary {
+    padding: 12px;
+    font-weight: 600;
+    color: var(--warna-dasar-gelap);
+    cursor: pointer;
+    border-radius: 8px;
+  }
+  details.contoh-jawaban summary:hover {
+    background-color: #f0f0f0;
+  }
+  details.contoh-jawaban div {
+    padding: 15px;
+    border-top: 1px solid #eee;
+  }
+  details.contoh-jawaban p {
+    margin-bottom: 10px;
+    font-size: 0.95rem;
+  }
+  details.contoh-jawaban p strong {
+    color: #333;
+  }
 }
