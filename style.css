@@ -1,0 +1,528 @@
+/* --- Bagian CSS (Styling) --- */
+
+/* Variabel Warna (Palet Tema) */
+:root {
+  --warna-dasar: #007bff;
+  --warna-dasar-gelap: #0056b3;
+  --warna-sekunder: #ffc107;
+  --warna-teks: #333;
+  --warna-latar: #f4f7f6;
+  --warna-kartu: #ffffff;
+  --warna-benar: #28a745;
+  --warna-salah: #dc3545;
+  --warna-benar-latar: #d4edda;
+  --warna-salah-latar: #f8d7da;
+  --bayangan-kartu: 0 4px 12px rgba(0, 0, 0, 0.08);
+
+  /* Warna untuk Beranda (dari gambar) */
+  --warna-beranda-latar: #d5e8d4;
+  --warna-beranda-outline: #b53c3c;
+}
+
+/* Pengaturan Dasar Halaman */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Poppins", Arial, sans-serif;
+  background-color: var(--warna-latar);
+  color: var(--warna-teks);
+  line-height: 1.6;
+}
+
+/* --- [BARU] Navigasi Utama --- */
+.navbar-utama {
+  background-color: #ffffff;
+  border-bottom: 1px solid #ddd;
+  padding: 15px 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 900;
+}
+
+.nav-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-brand {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--warna-dasar);
+  text-decoration: none;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #555;
+  font-weight: 600;
+  padding: 8px 12px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+  background-color: #f0f0f0;
+  color: #111;
+}
+
+.nav-link.active {
+  background-color: var(--warna-dasar);
+  color: white;
+}
+
+/* --- [BARU] Hero Section Beranda --- */
+.beranda-hero {
+  background-color: var(--warna-beranda-latar);
+  padding: 60px 20px 40px 20px;
+  text-align: center;
+  border-bottom: 5px solid #a3c4a2;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+.beranda-subtitle-top {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--warna-teks);
+}
+
+.beranda-title {
+  font-family: "Fredoka One", cursive;
+  font-size: clamp(3rem, 10vw, 5.5rem);
+  color: white;
+  line-height: 1.1;
+  margin: 10px 0;
+  -webkit-text-stroke: 1px var(--warna-beranda-outline);
+  text-stroke: 1px var(--warna-beranda-outline);
+  paint-order: stroke fill;
+  text-shadow: 3px 3px 0 var(--warna-beranda-outline),
+    -3px -3px 0 var(--warna-beranda-outline),
+    3px -3px 0 var(--warna-beranda-outline),
+    -3px 3px 0 var(--warna-beranda-outline);
+}
+
+.beranda-subtitle-bottom {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--warna-teks);
+  margin-bottom: 20px;
+}
+
+.beranda-kelompok {
+  margin-bottom: 30px;
+}
+
+.beranda-kelompok h3 {
+  font-weight: 700;
+  color: #333;
+}
+
+.beranda-kelompok ul {
+  list-style-type: none;
+  padding: 0;
+  font-size: 1.1rem;
+  color: #444;
+}
+
+/* Dekorasi (Placeholder) */
+.dekorasi {
+  position: absolute;
+  opacity: 0.5;
+  z-index: 1;
+  /* Ganti src di HTML dengan path gambar asli */
+  width: 150px;
+  height: auto;
+  /* Placeholder */
+  background: #aaa;
+  color: white;
+  padding: 10px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.dekorasi-1 {
+  top: 10px;
+  left: 10px;
+  width: 150px;
+  transform: rotate(-45deg);
+}
+.dekorasi-2 {
+  top: 10px;
+  right: 10px;
+  width: 120px;
+}
+.dekorasi-3 {
+  bottom: 60px;
+  left: 20px;
+  width: 200px;
+}
+.dekorasi-4 {
+  bottom: 10px;
+  right: 20px;
+  width: 180px;
+}
+
+/* --- [BARU] Konten Utama & Pilihan Materi --- */
+main.container {
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 0 20px;
+}
+
+main.container h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--warna-dasar-gelap);
+  text-align: center;
+  margin-bottom: 10px;
+}
+p.deskripsi-pilihan {
+  text-align: center;
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+.materi-pilihan-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+}
+
+.materi-card {
+  background: var(--warna-kartu);
+  border-radius: 12px;
+  box-shadow: var(--bayangan-kartu);
+  padding: 25px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.materi-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.materi-card-icon {
+  font-size: 3.5rem;
+  margin-bottom: 15px;
+}
+
+.materi-card h3 {
+  font-size: 1.5rem;
+  color: var(--warna-dasar-gelap);
+  margin-bottom: 10px;
+}
+
+.materi-card p {
+  font-size: 1rem;
+  color: #444;
+  margin-bottom: 20px;
+}
+
+.materi-card-btn {
+  display: inline-block;
+  background-color: var(--warna-dasar);
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 12px 30px;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.materi-card-btn:hover {
+  background-color: var(--warna-dasar-gelap);
+}
+
+/* --- [BARU] Footer --- */
+.footer-utama {
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+  background-color: #e9ecef;
+  color: #777;
+  border-top: 1px solid #ddd;
+}
+
+/* --- Desain Kartu (Card) untuk Halaman Materi --- */
+.card {
+  background-color: var(--warna-kartu);
+  border-radius: 12px;
+  padding: 25px;
+  margin-bottom: 25px;
+  box-shadow: var(--bayangan-kartu);
+}
+
+.card h2 {
+  color: var(--warna-dasar-gelap);
+  margin-bottom: 15px;
+  border-bottom: 2px solid var(--warna-sekunder);
+  padding-bottom: 5px;
+  display: inline-block;
+}
+
+.card h3 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.card p,
+.card ul {
+  margin-bottom: 15px;
+  font-size: 16px;
+}
+
+.card ul {
+  padding-left: 25px;
+}
+
+.card li {
+  margin-bottom: 8px;
+}
+
+.card ul.tujuan-list li {
+  list-style-type: "🎯";
+  padding-left: 10px;
+}
+
+/* Placeholder untuk gambar */
+.materi-gambar {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  display: block;
+  margin: 20px auto;
+  background-color: #eee;
+  border-radius: 8px;
+  border: 2px dashed #ccc;
+  text-align: center;
+  padding: 40px 20px;
+  font-style: italic;
+  color: #777;
+}
+
+/* Kotak khusus untuk rumus */
+.rumus-box {
+  background-color: #e6f7ff;
+  border: 2px solid #b3e0ff;
+  border-left: 5px solid var(--warna-dasar);
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: 600;
+  text-align: center;
+  font-family: "Courier New", Courier, monospace;
+}
+
+/* Penyesuaian untuk video */
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+  background: #000;
+  margin: 20px 0;
+  border-radius: 8px;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* --- LKPD (Kuis Interaktif) --- */
+.lkpd h2 {
+  color: var(--warna-dasar-gelap);
+}
+
+.quiz-item {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.quiz-item p.soal {
+  font-weight: 600;
+  font-size: 17px;
+  margin-bottom: 15px;
+}
+
+.quiz-options {
+  list-style-type: none;
+  padding: 0;
+  margin-bottom: 15px;
+}
+
+.quiz-options li {
+  margin-bottom: 10px;
+}
+
+.quiz-options label {
+  display: block;
+  padding: 12px;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.quiz-options label:hover {
+  background-color: #f9f9f9;
+  border-color: #ccc;
+}
+
+.quiz-options input[type="radio"]:checked + label {
+  background-color: #e6f7ff;
+  border-color: var(--warna-dasar);
+  font-weight: 600;
+}
+
+.quiz-btn {
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  padding: 10px 18px;
+  background-color: var(--warna-sekunder);
+  color: var(--warna-teks);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.quiz-btn:hover {
+  background-color: #e6ac00;
+}
+
+/* Kotak Umpan Balik (Feedback) */
+.feedback-box {
+  display: none;
+  margin-top: 15px;
+  padding: 12px;
+  border-radius: 8px;
+  font-weight: 600;
+  border: 1px solid;
+}
+
+.feedback-box.correct {
+  background-color: var(--warna-benar-latar);
+  color: var(--warna-benar);
+  border-color: var(--warna-benar);
+}
+
+.feedback-box.incorrect {
+  background-color: var(--warna-salah-latar);
+  color: var(--warna-salah);
+  border-color: var(--warna-salah);
+}
+
+/* --- Gaya untuk Soal Evaluasi Isian --- */
+.evaluasi-isian {
+  margin-top: 20px;
+}
+
+.evaluasi-isian ol {
+  padding-left: 20px;
+  list-style-position: outside;
+}
+
+.evaluasi-isian li {
+  margin-bottom: 25px;
+  border-bottom: 1px dashed #ddd;
+  padding-bottom: 15px;
+  list-style: decimal;
+}
+
+.evaluasi-isian ul {
+  list-style-type: disc;
+  margin-left: 25px;
+  margin-top: 10px;
+}
+
+.evaluasi-isian ol ol {
+  margin-left: 20px;
+  margin-top: 10px;
+}
+
+.evaluasi-isian li p {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.evaluasi-isian li p strong {
+  color: var(--warna-dasar-gelap);
+}
+
+.soal-gambar {
+  width: 100%;
+  max-width: 350px;
+  height: auto;
+  margin: 10px 0;
+  border-radius: 8px;
+  border: 1px solid #eee;
+  background-color: #f9f9f9;
+  padding: 10px;
+  display: block;
+}
+
+hr.pemisah-lkpd {
+  margin: 40px 0 30px 0;
+  border: none;
+  border-top: 2px solid var(--warna-sekunder);
+}
+
+/* --- Penyesuaian Responsif --- */
+@media (max-width: 768px) {
+  .nav-container {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .nav-links {
+    width: 100%;
+    justify-content: space-around;
+    gap: 5px;
+  }
+  .nav-link {
+    padding: 8px 5px;
+    font-size: 0.9rem;
+  }
+
+  .beranda-hero {
+    padding: 40px 15px 30px 15px;
+  }
+  .dekorasi {
+    display: none; /* Sembunyikan dekorasi di HP agar tidak penuh */
+  }
+
+  .materi-pilihan-container {
+    grid-template-columns: 1fr;
+  }
+}
