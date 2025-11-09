@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Evaluasi: Bilangan Bulat</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+
+    <style>
+      .esai-input {
+        font-family: "Poppins", Arial, sans-serif;
+        font-size: 16px;
+        padding: 12px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        width: 100%;
+        max-width: 400px;
+        margin-top: 10px;
+        transition: border-color 0.3s, box-shadow 0.3s;
+      }
+      .esai-input:focus {
+        border-color: var(--warna-dasar);
+        box-shadow: 0 0 5px rgba(0, 123, 255, 0.25);
+        outline: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="header-placeholder"></div>
+
+    <main class="container">
+      <div class="card lkpd">
+        <h2>📝 Evaluasi: Bilangan Bulat</h2>
+        <p style="font-style: italic; margin-bottom: 20px">
+          Kerjakan soal Pilihan Ganda dan Esai di bawah ini. Klik "Selesaikan
+          Evaluasi" di bagian akhir untuk melihat hasilmu!
+        </p>
+
+        <form id="evaluasi-form-bulat">
+          <h3>A. Pilihan Ganda</h3>
+
+          <div class="quiz-item">
+            <p class="soal">1. Hasil dari 12 + (−7) adalah …</p>
+            <ul class="quiz-options">
+              <li>
+                <input type="radio" name="q1" id="q1a" value="a" /><label
+                  for="q1a"
+                  >a. -19</label
+                >
+              </li>
+              <li>
+                <input type="radio" name="q1" id="q1b" value="b" /><label
+                  for="q1b"
+                  >b. -5</label
+                >
+              </li>
+              <li>
+                <input type="radio" name="q1" id="q1c" value="c" /><label
+                  for="q1c"
+                  >c. 5</label
+                >
+              </li>
+              <li>
+                <input type="radio" name="q1" id="q1d" value="d" /><label
+                  for="q1d"
+                  >d. 19</label
+                >
+              </li>
+              <li>
+                <input type="radio" name="q1" id="q1e" value="e" /><label
+                  for="q1e"
+                  >e. 0</label
+                >
+              </li>
+            </ul>
+            <div class="feedback-box" id="feedback-q-1"></div>
+          </div>
+
+          <div class="quiz-item">
+            <p class="soal">2. Hasil dari 15 − (8) adalah …</p>
+            <ul class="quiz-options">
+              <li>
+                <input type="radio" name="q2" id="q2a" value="a" /><label
+                  for="q2a"
+                  >a. 7</label
+                >
+              </li>
+              <li>
+                <input type="radio" name="q2" id="q2b" value="b" /><label
+                  for="q2b"
+                  >b. 23</label
+                >
+              </li>
+              <li>
+                <input type="radio" name="q2" id="q2c" value="c" /><label
+                  for="q2c"
+                  >c. -23</label
+                >
+              </li>
+              <li>
+                <input type="radio" name="q2" id="q2d" value="d" /><label
+                  for="q2d"
+                  >d. -7</label
+                >
+              </li>
+              <li>
+                <input type="radio" name="q2" id="q2e" value="e" /><label
+                  for="q2e"
+                  >e. 3</label
+                >
+              </li>
+            </ul>
+            <div class="feedback-box" id="feedback-q-2"></div>
+          </div>
+
+          <div class="quiz-item">
+            <p class="soal">3. −10 − (15) = …</p>
+            <ul class="quiz-options">
+              <li>
+                <input type="radio" name="q3" id="q3a" value="a" /><label
+                  for="q3a"
+                  >a. -5</label
+                >
+              </li>
+              <li>
+                <input type="radio" name="q3" id="q3b" value="b" /><label
+                  for="q3b"
+                  >b. -25</label
+                >
+              </li>
+              <li>
+                <input type="radio" name="q3" id="q3c" value="c" /><label
+                  for="q3c"
+                  >c. 25</label
+                >
+              </li>
+              <li>
+                <input type="radio" name="q3" id="q3d" value="d" /><label
+                  for="q3d"
+                  >d. 5</label
+                >
+              </li>
+              <li>
+                <input type="radio" name="q3" id="q3e" value="e" /><label
+                  for="q3e"
+                  >e. 0</label
+                >
+              </li>
+            </ul>
+            <div class="feedback-box" id="feedback-q-3"></div>
+          </div>
+
+          <div class="quiz-item">
+            <p class="soal">4. Jika n = −30 − (−15), maka nilai n adalah …</p>
+            <ul class="quiz-options">
+              <li>
+                <input type="radio" name="q4" id="q4a" value="a" /><label
+                  for="q4a"
+                  >a. -55</label
+                >
+              </li>
+              <li>
+                <input type="radio" name="q4" id="q4b" value="b" /><label
+                  for="q4b"
+                  >b. -15</label
+                >
+              </li>
+              <li>
+                <input type="radio" name="q4" id="q4c" value="c" /><label
+                  for="q4c"
+                  >c. 15</label
+                >
+              </li>
+              <li>
+                <input type="radio" name="q4" id="q4d" value="d" /><label
+                  for="q4d"
+                  >d. 55</label
+                >
+              </li>
+              <li>
+                <input type="radio" name="q4" id="q4e" value="e" /><label
+                  for="q4e"
+                  >e. 0</label
+                >
+              </li>
+            </ul>
+            <div class="feedback-box" id="feedback-q-4"></div>
+          </div>
+
+          <div class="quiz-item">
+            <p class="soal">5. Hasil dari 8 + (−12) − (−2) = …</p>
+            <ul class="quiz-options">
+              <li>
+                <input type="radio" name="q5" id="q5a" value="a" /><label
+                  for="q5a"
+                  >a. 2</label
+                >
+              </li>
+              <li>
+                <input type="radio" name="q5" id="q5b" value="b" /><label
+                  for="q5b"
+                  >b. -16</label
+                >
+              </li>
+              <li>
+                <input type="radio" name="q5" id="q5c" value="c" /><label
+                  for="q5c"
+                  >c. 14</label
+                >
+              </li>
+              <li>
+                <input type="radio" name="q5" id="q5d" value="d" /><label
+                  for="q5d"
+                  >d. 20</label
+                >
+              </li>
+              <li>
+                <input type="radio" name="q5" id="q5e" value="e" /><label
+                  for="q5e"
+                  >e. -2</label
+                >
+              </li>
+            </ul>
+            <div class="feedback-box" id="feedback-q-5"></div>
+          </div>
+
+          <hr class="pemisah-lkpd" />
+          <h3>B. Esai</h3>
+
+          <div class="quiz-item">
+            <p class="soal">1. Hitunglah hasil dari −20 + 8.</p>
+            <input
+              type="text"
+              id="es1"
+              class="esai-input"
+              placeholder="Ketik jawabanmu..."
+            />
+            <div class="feedback-box" id="feedback-es-1"></div>
+          </div>
+
+          <div class="quiz-item">
+            <p class="soal">2. Tentukan hasil dari 5 − (−10) + 3.</p>
+            <input
+              type="text"
+              id="es2"
+              class="esai-input"
+              placeholder="Ketik jawabanmu..."
+            />
+            <div class="feedback-box" id="feedback-es-2"></div>
+          </div>
+
+          <div class="quiz-item">
+            <p class="soal">
+              3. Jika suhu awal -5°C kemudian naik 12°C, berapakah suhu
+              akhirnya?
+            </p>
+            <input
+              type="text"
+              id="es3"
+              class="esai-input"
+              placeholder="Ketik jawabanmu..."
+            />
+            <div class="feedback-box" id="feedback-es-3"></div>
+          </div>
+
+          <div class="quiz-item">
+            <p class="soal">4. Selesaikan operasi 10 + (−5) − 8.</p>
+            <input
+              type="text"
+              id="es4"
+              class="esai-input"
+              placeholder="Ketik jawabanmu..."
+            />
+            <div class="feedback-box" id="feedback-es-4"></div>
+          </div>
+
+          <div class="quiz-item">
+            <p class="soal">
+              5. Dalam sebuah pertandingan, tim A mendapat 15 poin dan
+              kehilangan 22 poin. Berapa skor akhir tim A?
+            </p>
+            <input
+              type="text"
+              id="es5"
+              class="esai-input"
+              placeholder="Ketik jawabanmu..."
+            />
+            <div class="feedback-box" id="feedback-es-5"></div>
+          </div>
+
+          <button type="submit" class="quiz-btn" id="submit-eval-btn">
+            Selesaikan Evaluasi
+          </button>
+
+          <div id="skor-total-container" style="display: none"></div>
+        </form>
+      </div>
+    </main>
+
+    <footer class="footer-utama">
+      <p>Kelompok 7 - Pengembangan Matematika SD | 2025</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Kunci Jawaban
+        const correctAnswers = {
+          q1: "c", // 12 + (-7) = 5
+          q2: "a", // 15 - 8 = 7
+          q3: "b", // -10 - 15 = -25
+          q4: "b", // -30 - (-15) = -15
+          q5: "e", // 8 - 12 + 2 = -2
+          es1: "-12", // -20 + 8
+          es2: "18", // 5 + 10 + 3
+          es3: "7", // -5 + 12
+          es4: "-3", // 10 - 5 - 8
+          es5: "-7", // 15 - 22
+        };
+
+        const evalForm = document.getElementById("evaluasi-form-bulat");
+        const submitButton = document.getElementById("submit-eval-btn");
+        const scoreContainer = document.getElementById("skor-total-container");
+
+        evalForm.addEventListener("submit", function (e) {
+          // Mencegah halaman reload
+          e.preventDefault();
+
+          const totalPG = 5;
+          const totalEsai = 5;
+          const totalQuestions = totalPG + totalEsai;
+          let allAnswered = true;
+
+          // --- BLOK VALIDASI ---
+          // Cek Pilihan Ganda
+          for (let i = 1; i <= totalPG; i++) {
+            const qName = "q" + i;
+            const selectedOption = evalForm.querySelector(
+              'input[name="' + qName + '"]:checked'
+            );
+            if (!selectedOption) {
+              allAnswered = false;
+              break;
+            }
+          }
+
+          // Cek Esai (jika PG sudah terisi)
+          if (allAnswered) {
+            for (let i = 1; i <= totalEsai; i++) {
+              const esId = "es" + i;
+              const esInput = document.getElementById(esId);
+              if (esInput.value.trim() === "") {
+                allAnswered = false;
+                break;
+              }
+            }
+          }
+
+          // Jika ada yang belum dijawab, tampilkan alert dan hentikan
+          if (!allAnswered) {
+            alert(
+              "Oops, sepertinya Anda belum menjawab semua soal (Pilihan Ganda dan Esai). Silakan periksa kembali!"
+            );
+            return; // Hentikan fungsi
+          }
+          // --- AKHIR BLOK VALIDASI ---
+
+          // --- Jika lolos validasi, lanjutkan pengecekan skor ---
+          let score = 0;
+
+          // Loop untuk Pilihan Ganda
+          for (let i = 1; i <= totalPG; i++) {
+            const qName = "q" + i;
+            const feedbackBox = document.getElementById("feedback-q-" + i);
+            const selectedOption = evalForm.querySelector(
+              'input[name="' + qName + '"]:checked'
+            );
+            const userAnswer = selectedOption.value;
+            const correctAnswerValue = correctAnswers[qName];
+            const correctLabel = document.querySelector(
+              'label[for="q' + i + correctAnswerValue + '"]'
+            ).textContent;
+
+            if (userAnswer === correctAnswerValue) {
+              score++;
+              feedbackBox.textContent = "Jawaban Anda benar! 👍";
+              feedbackBox.className = "feedback-box correct";
+            } else {
+              feedbackBox.textContent =
+                "Jawaban Anda salah. Yang benar adalah: " + correctLabel;
+              feedbackBox.className = "feedback-box incorrect";
+            }
+            feedbackBox.style.display = "block";
+          }
+
+          // Loop untuk Esai
+          for (let i = 1; i <= totalEsai; i++) {
+            const esId = "es" + i;
+            const feedbackBox = document.getElementById("feedback-es-" + i);
+            const userInput = document.getElementById(esId).value.trim(); // .trim() untuk hapus spasi
+            const correctAnswer = correctAnswers[esId];
+
+            if (userInput === correctAnswer) {
+              score++;
+              feedbackBox.textContent = "Jawaban Anda benar! 👍";
+              feedbackBox.className = "feedback-box correct";
+            } else {
+              feedbackBox.textContent =
+                "Jawaban Anda salah. Yang benar adalah: " + correctAnswer;
+              feedbackBox.className = "feedback-box incorrect";
+            }
+            feedbackBox.style.display = "block";
+          }
+
+          // Tampilkan skor total
+          scoreContainer.textContent =
+            "Skor Akhir Anda: " +
+            score +
+            " dari " +
+            totalQuestions +
+            " soal benar.";
+          scoreContainer.className = "skor-total";
+          scoreContainer.style.display = "block";
+
+          // Sembunyikan tombol 'Selesaikan'
+          submitButton.style.display = "none";
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -55,7 +55,7 @@ body {
 }
 
 .nav-brand {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   font-weight: 700;
   color: var(--warna-dasar);
   text-decoration: none;
@@ -63,16 +63,20 @@ body {
 
 .nav-links {
   display: flex;
-  gap: 20px;
+  gap: 15px;
+  overflow: visible;
+  align-items: center;
 }
 
 .nav-link {
   text-decoration: none;
   color: #555;
   font-weight: 600;
-  padding: 8px 12px;
+  padding: 8px 10px;
   border-radius: 6px;
   transition: all 0.3s ease;
+  font-size: 0.95rem;
+  white-space: nowrap;
 }
 
 .nav-link:hover {
@@ -85,14 +89,56 @@ body {
   color: white;
 }
 
-/* --- [BARU] Hero Section Beranda --- */
+/* --- Navigasi Dropdown --- */
+.nav-dropdown {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.nav-dropdown .dropbtn {
+  cursor: pointer;
+}
+
+.nav-dropdown .dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 220px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 100;
+  border-radius: 5px;
+  margin-top: 5px;
+}
+
+.nav-dropdown .dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  font-weight: 400;
+  font-size: 0.9rem;
+  background-color: transparent;
+  white-space: normal;
+}
+
+.nav-dropdown .dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.nav-dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* --- Hero Section Beranda --- */
 .beranda-hero {
   background-color: var(--warna-beranda-latar);
-  padding: 60px 20px; /* Padding atas & bawah */
+  padding: 60px 20px;
   text-align: center;
   position: relative;
-  overflow: hidden; /* Penting! */
-  min-height: 450px; /* Beri ruang untuk dekorasi */
+  overflow: hidden;
+  min-height: 450px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -100,7 +146,7 @@ body {
 
 .hero-content {
   position: relative;
-  z-index: 2; /* Konten teks di atas dekorasi */
+  z-index: 2;
   max-width: 600px;
   margin: 0 auto;
 }
@@ -113,7 +159,7 @@ body {
 
 .beranda-title {
   font-family: "Fredoka One", cursive;
-  font-size: clamp(3rem, 10vw, 5rem); /* Disesuaikan agar & tidak aneh */
+  font-size: clamp(3rem, 10vw, 5rem);
   color: white;
   line-height: 1.2;
   margin: 10px 0;
@@ -149,10 +195,10 @@ body {
   color: #444;
 }
 
-/* --- [BARU] Dekorasi Latar Belakang --- */
+/* --- Dekorasi Latar Belakang --- */
 .dekorasi {
   position: absolute;
-  z-index: 1; /* Di bawah konten */
+  z-index: 1;
   pointer-events: none;
   filter: drop-shadow(2px 2px 3px rgba(0, 0, 0, 0.1));
 }
@@ -174,7 +220,7 @@ body {
 .dekorasi-siswa {
   bottom: 20px;
   left: 40px;
-  width: 150px; /* Ukuran siswa */
+  width: 150px;
 }
 
 .dekorasi-buku {
@@ -377,6 +423,14 @@ p.deskripsi-pilihan {
   margin-bottom: 15px;
 }
 
+/* ======================================================= */
+/* === INI ADALAH PERBAIKANNYA === */
+.quiz-options input[type="radio"] {
+  /* Sembunyikan titik radio button asli */
+  display: none;
+}
+/* ======================================================= */
+
 .quiz-options {
   list-style-type: none;
   padding: 0;
@@ -559,11 +613,10 @@ details.contoh-jawaban p strong {
   }
 
   .beranda-hero {
-    padding: 40px 15px; /* Padding atas & bawah untuk mobile */
-    min-height: 0; /* Hapus min-height di mobile */
+    padding: 40px 15px;
+    min-height: 0;
   }
 
-  /* [PERBAIKAN] Sembunyikan SEMUA dekorasi di HP agar bersih */
   .dekorasi {
     display: none;
   }

@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz: Prisma Segitiga</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="header-placeholder"></div>
+
+    <main class="container">
+      <div class="card lkpd">
+        <h2>🧠 Quiz: Prisma Segitiga</h2>
+        <p style="font-style: italic; margin-bottom: 20px">
+          Pilih jawaban yang paling tepat untuk setiap soal di bawah ini. Klik
+          "Selesaikan Quiz" di bagian akhir untuk melihat hasilmu!
+        </p>
+
+        <form id="quiz-form-prisma">
+          <div class="quiz-item">
+            <p class="soal">
+              1. Sebuah prisma segitiga memiliki luas alas 10 cm². Berapakah
+              total luas dari kedua alasnya (alas dan tutup)?
+            </p>
+            <ul class="quiz-options">
+              <li>
+                <input type="radio" name="q1" id="q1a" value="a" /><label
+                  for="q1a"
+                  >a. 10 cm²</label
+                >
+              </li>
+              <li>
+                <input type="radio" name="q1" id="q1b" value="b" /><label
+                  for="q1b"
+                  >b. 20 cm²</label
+                >
+              </li>
+              <li>
+                <input type="radio" name="q1" id="q1c" value="c" /><label
+                  for="q1c"
+                  >c. 30 cm²</label
+                >
+              </li>
+              <li>
+                <input type="radio" name="q1" id="q1d" value="d" /><label
+                  for="q1d"
+                  >d. 100 cm²</label
+                >
+              </li>
+            </ul>
+            <div class="feedback-box" id="feedback-1"></div>
+          </div>
+
+          <div class="quiz-item">
+            <p class="soal">
+              2. Sebuah prisma segitiga memiliki luas alas 40 cm². Jika tinggi
+              prisma tersebut adalah 12 cm, berapakah volumenya?
+            </p>
+            <ul class="quiz-options">
+              <li>
+                <input type="radio" name="q2" id="q2a" value="a" /><label
+                  for="q2a"
+                  >a. 2400 cm³</label
+                >
+              </li>
+              <li>
+                <input type="radio" name="q2" id="q2b" value="b" /><label
+                  for="q2b"
+                  >b. 240 cm³</label
+                >
+              </li>
+              <li>
+                <input type="radio" name="q2" id="q2c" value="c" /><label
+                  for="q2c"
+                  >c. 4800 cm³</label
+                >
+              </li>
+              <li>
+                <input type="radio" name="q2" id="q2d" value="d" /><label
+                  for="q2d"
+                  >d. 480 cm³</label
+                >
+              </li>
+            </ul>
+            <div class="feedback-box" id="feedback-2"></div>
+          </div>
+
+          <div class="quiz-item">
+            <p class="soal">
+              3. Sebuah prisma memiliki alas berbentuk segitiga siku-siku dengan
+              panjang sisi miring 25 cm dan salah satu sisi siku-sikunya 20 cm.
+              Jika tinggi prisma tersebut adalah 30 cm, hitunglah volume prisma.
+            </p>
+            <ul class="quiz-options">
+              <li>
+                <input type="radio" name="q3" id="q3a" value="a" /><label
+                  for="q3a"
+                  >a. 7500 cm³</label
+                >
+              </li>
+              <li>
+                <input type="radio" name="q3" id="q3b" value="b" /><label
+                  for="q3b"
+                  >b. 4500 cm³</label
+                >
+              </li>
+              <li>
+                <input type="radio" name="q3" id="q3c" value="c" /><label
+                  for="q3c"
+                  >c. 3750 cm³</label
+                >
+              </li>
+              <li>
+                <input type="radio" name="q3" id="q3d" value="d" /><label
+                  for="q3d"
+                  >d. 2250 cm³</label
+                >
+              </li>
+            </ul>
+            <div class="feedback-box" id="feedback-3"></div>
+          </div>
+
+          <div class="quiz-item">
+            <p class="soal">
+              4. Sebuah prisma segitiga memiliki luas permukaan total 808 cm².
+              Alasnya adalah segitiga siku-siku dengan sisi-sisi 8 cm, 15 cm,
+              dan 17 cm. Berapakah volume prisma tersebut? (Petunjuk: Cari
+              tinggi prisma dulu)
+            </p>
+            <ul class="quiz-options">
+              <li>
+                <input type="radio" name="q4" id="q4a" value="a" /><label
+                  for="q4a"
+                  >a. 1032 cm³</label
+                >
+              </li>
+              <li>
+                <input type="radio" name="q4" id="q4b" value="b" /><label
+                  for="q4b"
+                  >b. 688 cm³</label
+                >
+              </li>
+              <li>
+                <input type="radio" name="q4" id="q4c" value="c" /><label
+                  for="q4c"
+                  >c. 1200 cm³</label
+                >
+              </li>
+              <li>
+                <input type="radio" name="q4" id="q4d" value="d" /><label
+                  for="q4d"
+                  >d. 960 cm³</label
+                >
+              </li>
+            </ul>
+            <div class="feedback-box" id="feedback-4"></div>
+          </div>
+
+          <div class="quiz-item">
+            <p class="soal">
+              5. Volume sebuah prisma segitiga adalah 1500 cm³. Alasnya
+              berbentuk segitiga dengan luas 75 cm². Berapakah tinggi prisma
+              tersebut?
+            </p>
+            <ul class="quiz-options">
+              <li>
+                <input type="radio" name="q5" id="q5a" value="a" /><label
+                  for="q5a"
+                  >a. 20 cm</label
+                >
+              </li>
+              <li>
+                <input type="radio" name="q5" id="q5b" value="b" /><label
+                  for="q5b"
+                  >b. 40 cm</label
+                >
+              </li>
+              <li>
+                <input type="radio" name="q5" id="q5c" value="c" /><label
+                  for="q5c"
+                  >c. 15 cm</label
+                >
+              </li>
+              <li>
+                <input type="radio" name="q5" id="q5d" value="d" /><label
+                  for="q5d"
+                  >d. 25 cm</label
+                >
+              </li>
+            </ul>
+            <div class="feedback-box" id="feedback-5"></div>
+          </div>
+
+          <button type="submit" class="quiz-btn" id="submit-quiz-btn">
+            Selesaikan Quiz
+          </button>
+
+          <div id="skor-total-container" style="display: none"></div>
+        </form>
+      </div>
+    </main>
+
+    <footer class="footer-utama">
+      <p>Kelompok 7 - Pengembangan Matematika SD | 2025</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Kunci Jawaban
+        const correctAnswers = {
+          q1: "b", // 2 * 10 = 20
+          q2: "d", // 40 * 12 = 480
+          q3: "b", // Sisi lain = 15. Luas Alas = 1/2*15*20 = 150. V = 150*30 = 4500
+          q4: "a", // Luas Alas = 1/2*8*15=60. Keliling=8+15+17=40. LP=808=(2*60)+(40*T) -> 688=40*T -> T=17.2. V=60*17.2=1032
+          q5: "a", // T = V / LuasAlas = 1500 / 75 = 20
+        };
+
+        const quizForm = document.getElementById("quiz-form-prisma");
+        const submitButton = document.getElementById("submit-quiz-btn");
+        const scoreContainer = document.getElementById("skor-total-container");
+
+        quizForm.addEventListener("submit", function (e) {
+          // Mencegah halaman reload
+          e.preventDefault();
+
+          const totalQuestions = 5;
+          let allAnswered = true;
+
+          // --- BLOK VALIDASI BARU ---
+          // Pertama, cek apakah semua sudah dijawab
+          for (let i = 1; i <= totalQuestions; i++) {
+            const qName = "q" + i;
+            const selectedOption = quizForm.querySelector(
+              'input[name="' + qName + '"]:checked'
+            );
+            if (!selectedOption) {
+              allAnswered = false;
+              break; // Hentikan loop jika satu saja belum dijawab
+            }
+          }
+
+          // Jika ada yang belum dijawab, tampilkan alert dan hentikan fungsi
+          if (!allAnswered) {
+            alert(
+              "Oops, sepertinya Anda belum menjawab semua soal. Silakan periksa kembali!"
+            );
+            return; // Hentikan fungsi di sini
+          }
+          // --- AKHIR BLOK VALIDASI ---
+
+          // --- Jika lolos validasi, lanjutkan pengecekan skor ---
+          let score = 0;
+
+          // Loop untuk setiap soal (untuk menilai)
+          for (let i = 1; i <= totalQuestions; i++) {
+            const qName = "q" + i;
+            const feedbackBox = document.getElementById("feedback-" + i);
+            const selectedOption = quizForm.querySelector(
+              'input[name="' + qName + '"]:checked'
+            );
+            const userAnswer = selectedOption.value;
+            const correctAnswerValue = correctAnswers[qName];
+            const correctLabel = document.querySelector(
+              'label[for="q' + i + correctAnswerValue + '"]'
+            ).textContent;
+
+            if (userAnswer === correctAnswerValue) {
+              // Jawaban Benar
+              score++;
+              feedbackBox.textContent = "Jawaban Anda benar! 👍";
+              feedbackBox.className = "feedback-box correct";
+            } else {
+              // Jawaban Salah
+              feedbackBox.textContent =
+                "Jawaban Anda salah. Yang benar adalah: " + correctLabel;
+              feedbackBox.className = "feedback-box incorrect";
+            }
+            feedbackBox.style.display = "block";
+          }
+
+          // Tampilkan skor total
+          scoreContainer.textContent =
+            "Skor Akhir Anda: " + score + " dari " + totalQuestions + " benar.";
+          scoreContainer.className = "skor-total";
+          scoreContainer.style.display = "block";
+
+          // Sembunyikan tombol 'Selesaikan'
+          submitButton.style.display = "none";
+        });
+      });
+    </script>
+  </body>
+</html>

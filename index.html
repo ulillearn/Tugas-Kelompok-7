@@ -9,6 +9,53 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
+
+    <style>
+      .nav-links {
+        /* Memastikan dropdown tidak terpotong */
+        overflow: visible;
+      }
+      .nav-dropdown {
+        position: relative;
+        display: inline-block; /* Agar sejajar dengan link lain */
+      }
+      /* Tombol dropdown, gunakan class .nav-link agar gaya mirip */
+      .nav-dropdown .dropbtn {
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 0; /* Hapus padding default tombol */
+        /* Tombol ini akan mewarisi gaya font, warna, dll dari .nav-link */
+      }
+      /* Konten dropdown (tersembunyi) */
+      .nav-dropdown .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f1f1f1;
+        min-width: 220px; /* Lebar minimum */
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 100; /* Pastikan di atas elemen lain */
+        border-radius: 5px;
+        margin-top: 5px; /* Jarak dari tombol */
+      }
+      /* Link di dalam dropdown */
+      .nav-dropdown .dropdown-content a {
+        color: black; /* Warna teks hitam */
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        text-align: left; /* Teks rata kiri */
+        /* Link ini TIDAK menggunakan class .nav-link agar warnanya hitam */
+      }
+      /* Ubah warna link dropdown saat di-hover */
+      .nav-dropdown .dropdown-content a:hover {
+        background-color: #ddd;
+      }
+      /* Tampilkan dropdown saat .nav-dropdown di-hover */
+      .nav-dropdown:hover .dropdown-content {
+        display: block;
+      }
+    </style>
   </head>
   <body>
     <nav class="navbar-utama">
@@ -18,10 +65,27 @@
           <a href="index.html" class="nav-link active">Beranda</a>
           <a href="bilangan_bulat.html" class="nav-link">Bilangan Bulat</a>
           <a href="prisma_segitiga.html" class="nav-link">Prisma Segitiga</a>
+
+          <div class="nav-dropdown">
+            <button class="nav-link dropbtn">Quiz ▾</button>
+            <div class="dropdown-content">
+              <a href="quiz_bilangan_bulat.html">Quiz Bilangan Bulat</a>
+              <a href="quiz_prisma_segitiga.html">Quiz Prisma Segitiga</a>
+            </div>
+          </div>
+
+          <div class="nav-dropdown">
+            <button class="nav-link dropbtn">Evaluasi ▾</button>
+            <div class="dropdown-content">
+              <a href="evaluasi_bilangan_bulat.html">Evaluasi Bilangan Bulat</a>
+              <a href="evaluasi_prisma_segitiga.html"
+                >Evaluasi Prisma Segitiga</a
+              >
+            </div>
+          </div>
         </div>
       </div>
     </nav>
-
     <header class="beranda-hero">
       <img
         src="img-dekorasi-penggaris-kiri.png"
