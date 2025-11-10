@@ -29,7 +29,7 @@
         gap: 40px;
       }
 
-      /* TEKS KIRI */
+      /* Teks Kiri */
       .hero-content {
         z-index: 2;
         position: relative;
@@ -42,24 +42,15 @@
         letter-spacing: 0.5px;
       }
 
-      /* --- INI PERBAIKANNYA --- 
-        Mengembalikan gaya teks 3D dengan warna yang serasi
-      */
+      /* Gaya Judul Utama (Putih dengan outline Navy) */
       .beranda-title {
         font-family: "Fredoka One", cursive;
         font-size: clamp(2.5rem, 8vw, 4rem);
         color: white; /* Teks warna putih */
-
-        /* Garis luar (outline) navy tipis */
         -webkit-text-stroke: 1.5px #0056b3;
         text-stroke: 1.5px #0056b3;
-
-        /* Bayangan 3D tebal (shadow) navy */
         text-shadow: 3px 3px 0 #0056b3;
-
-        /* Memastikan stroke di-render di belakang fill */
         paint-order: stroke fill;
-
         margin: 10px 0 15px;
         line-height: 1.2;
       }
@@ -94,12 +85,10 @@
         color: #444;
       }
 
-      /* GAMBAR KANAN */
+      /* Gambar Kanan */
       .hero-image {
         position: relative;
       }
-
-      /* Gradasi di belakang gambar sudah dihapus */
 
       .hero-image img {
         width: 100%;
@@ -108,7 +97,7 @@
         position: relative;
       }
 
-      /* RESPONSIF */
+      /* Responsif Khusus Hero Banner */
       @media (max-width: 768px) {
         .hero-grid {
           grid-template-columns: 1fr;
@@ -151,7 +140,7 @@
 
         <div class="hero-image">
           <img
-            src="ilustrasi_belajar.png"
+            src="hero_sd_math.png"
             alt="Ilustrasi Anak SD Belajar Matematika"
           />
         </div>

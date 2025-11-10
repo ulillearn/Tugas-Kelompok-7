@@ -103,42 +103,43 @@ body {
 .nav-dropdown .dropdown-content {
   display: none;
   position: absolute;
-  background-color: var(
-    --warna-kartu
-  ); /* REVISI: Latar belakang putih bersih */
+  background-color: var(--warna-kartu); /* Latar belakang putih bersih */
   min-width: 220px;
-  box-shadow: var(--bayangan-kartu); /* REVISI: Bayangan konsisten */
+  box-shadow: var(--bayangan-kartu); /* Bayangan konsisten */
   z-index: 100;
-  border-radius: 8px; /* REVISI: Radius lebih besar */
+  border-radius: 8px; /* Radius lebih besar */
   margin-top: 5px;
-  border: 1px solid #f0f0f0; /* REVISI: Border tipis */
-  padding: 4px 0; /* REVISI: Jarak di dalam kotak */
+  border: 1px solid #f0f0f0; /* Border tipis */
+  padding: 4px 0; /* Jarak di dalam kotak */
 }
 
 .nav-dropdown .dropdown-content a {
-  color: var(--warna-teks); /* REVISI: Warna teks konsisten */
-  padding: 10px 20px; /* REVISI: Padding lebih rapi */
+  color: var(--warna-teks); /* Warna teks konsisten */
+  padding: 10px 20px; /* Padding lebih rapi */
   text-decoration: none;
   display: block;
   text-align: left;
-  font-weight: 500; /* REVISI: Sedikit lebih tebal */
+  font-weight: 500; /* Sedikit lebih tebal */
   font-size: 0.9rem;
   background-color: transparent;
   white-space: normal;
-  transition: all 0.2s ease; /* REVISI: Transisi halus */
+  transition: all 0.2s ease; /* Transisi halus */
 }
 
 .nav-dropdown .dropdown-content a:hover {
-  background-color: #e6f7ff; /* REVISI: Warna hover biru muda */
-  color: var(--warna-dasar-gelap); /* REVISI: Warna teks biru tua */
+  background-color: #e6f7ff; /* Warna hover biru muda */
+  color: var(--warna-dasar-gelap); /* Warna teks biru tua */
 }
 
 .nav-dropdown:hover .dropdown-content {
   display: block;
 }
 
-/* --- PERBAIKAN UNTUK DROPDOWN KANAN --- */
-.nav-dropdown:last-child .dropdown-content {
+/* --- PERBAIKAN UNTUK DROPDOWN KANAN (Quiz & Evaluasi) --- */
+/* Selector diubah dari :last-child menjadi :nth-last-child(-n+2)
+  Ini akan menargetkan 2 elemen .nav-dropdown terakhir di .nav-links
+*/
+.nav-dropdown:nth-last-child(-n + 2) .dropdown-content {
   right: 0; /* Paksa dropdown rata kanan */
   left: auto; /* Nonaktifkan rata kiri default */
 }
